@@ -5,7 +5,7 @@ FrameMaker is an Objective-C library for simplifying, encapsulating, and optimiz
 - Layout a view using its right or (gasp) bottom edges
 - Center vertically and/or horizontally without any math
 - Set edge insets or offset for a view and let it size itself
-- Set just the left and right and don't worry about the width (or top and bottom and forget the height)
+- Set just the left and right and don't worry about the width
 - A single call to -setFrame: to minimize laying out the view hierarchy
 - Of course you can still set left, top, width, and height manually
 
