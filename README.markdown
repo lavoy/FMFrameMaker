@@ -17,14 +17,14 @@ This library was inspired by [Masonry] (https://github.com/Masonry/Masonry), but
 ```
 Center a sized view
 ```objc
-[self.subview fm_makeFrame:^(FMFrameMaker *frameMaker) {
+[view fm_makeFrame:^(FMFrameMaker *frameMaker) {
 	frameMaker.size = CGSizeMake(100, 100);
 	frameMaker.centered = YES;
 }];
 ```
 Show a sized view 10 points from the bottom right corner
 ```objc
-[self.subview fm_makeFrame:^(FMFrameMaker *frameMaker) {
+[view fm_makeFrame:^(FMFrameMaker *frameMaker) {
 	frameMaker.size = CGSizeMake(100, 100);
 	frameMaker.bottom = 10;
 	frameMaker.right = 10;
@@ -38,7 +38,7 @@ Show a view sized correctly inside the edges of (40, 20, 20, 20)
 ```
 Show a view offset 40 vertically and 20 horizontally
 ```objc
-[self.subview fm_makeFrame:^(FMFrameMaker *frameMaker) {
+[view fm_makeFrame:^(FMFrameMaker *frameMaker) {
 	frameMaker.offset = UIOffsetMake(40, 20);
 }];
 ```
