@@ -97,6 +97,8 @@
             origin.x = self.view.superview.bounds.size.width - size.width - self.right;
         } else if (self.centeredHorizontally || self.centered) {    // centered horizontally
             origin.x = (self.view.superview.bounds.size.width / 2.0) - (size.width / 2.0);
+        } else {
+            origin.x = self.view.frame.origin.x;
         }
         
         if (self.hasTop) {  // set the y outright
@@ -105,6 +107,8 @@
             origin.y = self.view.superview.bounds.size.height - size.height - self.bottom;
         } else if (self.centeredVertically || self.centered) {      // centered vertically
             origin.y = (self.view.superview.bounds.size.height / 2.0) - (size.height / 2.0);
+        } else {
+            origin.y = self.view.frame.origin.y;
         }
     }
     
