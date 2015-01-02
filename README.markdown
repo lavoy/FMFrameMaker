@@ -2,12 +2,12 @@
 
 FrameMaker is an Objective-C library for simplifying, encapsulating, and optimizing view layout logic into a single block for each view.
 
+`CGRect` frames are based upon the top left corner (`origin`) and the width and height (`size`). If you want to layout from the right, you have to do math. If you want to center, you have to do math. If you want to inset from the edges, you have to do math. With FrameMaker, you can forget about the math. You just specify the pieces you want to anchor, and FrameMaker figures out the rest.
+
 - Layout a view using its right or (gasp) bottom edges
-- Center vertically and/or horizontally without any math
-- Set edge insets or offset for a view and let it size itself
-- Set just the left and right and don't worry about the width
-- A single call to -setFrame: to minimize laying out the view hierarchy
-- Of course you can still set left, top, width, and height manually
+- Set edge insets for a view and let it size automatically
+- Center vertically and/or horizontally with no math
+- A single call to `-setFrame:` to minimize laying out the view hierarchy
 
 This library was inspired by [Masonry] (https://github.com/Masonry/Masonry), but without the AutoLayout.
 
