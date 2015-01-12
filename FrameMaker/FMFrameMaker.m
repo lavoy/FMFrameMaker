@@ -64,6 +64,8 @@
             }
             
             size.width = self.view.superview.bounds.size.width - offsetWidth;
+        } else {
+            size.width = self.view.frame.size.width;
         }
         
         if (self.hasHeight) {   // set the height outright
@@ -80,6 +82,8 @@
             }
             
             size.height = self.view.superview.bounds.size.height - offsetHeight;
+        } else {
+            size.height = self.view.frame.size.height;
         }
     }
     
