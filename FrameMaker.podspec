@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = "FrameMaker"
-  s.version       = "0.1"
+  s.version       = "0.2"
   s.summary       = "An Objective-C library for simplifying, encapsulating, and optimizing view layout logic into a single block for each view."
   s.homepage      = "https://github.com/lavoy/FrameMaker"
   s.license       = { :type => "MIT", :file => 'LICENSE' }
