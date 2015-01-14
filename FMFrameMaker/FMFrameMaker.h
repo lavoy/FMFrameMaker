@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIKit.h>
-#import "UIView+FrameMaker.h"
+#import "UIView+FMFrameMaker.h"
 
 @interface FMFrameMaker : NSObject
 

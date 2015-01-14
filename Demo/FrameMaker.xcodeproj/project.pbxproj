@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A12C3EAD1A6716300097A0EA /* FMFrameMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A12C3EAA1A6716300097A0EA /* FMFrameMaker.m */; };
+		A12C3EAE1A6716300097A0EA /* UIView+FMFrameMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A12C3EAC1A6716300097A0EA /* UIView+FMFrameMaker.m */; };
 		A145F1C81A54841A00743292 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A145F1C71A54841A00743292 /* main.m */; };
 		A145F1CB1A54841A00743292 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A145F1CA1A54841A00743292 /* AppDelegate.m */; };
 		A145F1CE1A54841A00743292 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A145F1CD1A54841A00743292 /* ViewController.m */; };
@@ -14,8 +16,6 @@
 		A145F1D31A54841A00743292 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A145F1D21A54841A00743292 /* Images.xcassets */; };
 		A145F1D61A54841A00743292 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A145F1D41A54841A00743292 /* LaunchScreen.xib */; };
 		A145F1E21A54841A00743292 /* FrameMakerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A145F1E11A54841A00743292 /* FrameMakerTests.m */; };
-		A145F1F01A5484DF00743292 /* FMFrameMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A145F1ED1A5484DF00743292 /* FMFrameMaker.m */; };
-		A145F1F11A5484DF00743292 /* UIView+FrameMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A145F1EF1A5484DF00743292 /* UIView+FrameMaker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A12C3EA91A6716300097A0EA /* FMFrameMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMFrameMaker.h; sourceTree = "<group>"; };
+		A12C3EAA1A6716300097A0EA /* FMFrameMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMFrameMaker.m; sourceTree = "<group>"; };
+		A12C3EAB1A6716300097A0EA /* UIView+FMFrameMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FMFrameMaker.h"; sourceTree = "<group>"; };
+		A12C3EAC1A6716300097A0EA /* UIView+FMFrameMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FMFrameMaker.m"; sourceTree = "<group>"; };
 		A145F1C21A54841A00743292 /* FrameMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A145F1C61A54841A00743292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A145F1C71A54841A00743292 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,10 +46,6 @@
 		A145F1DB1A54841A00743292 /* FrameMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrameMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A145F1E01A54841A00743292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A145F1E11A54841A00743292 /* FrameMakerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameMakerTests.m; sourceTree = "<group>"; };
-		A145F1EC1A5484DF00743292 /* FMFrameMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMFrameMaker.h; path = ../../FrameMaker/FMFrameMaker.h; sourceTree = "<group>"; };
-		A145F1ED1A5484DF00743292 /* FMFrameMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMFrameMaker.m; path = ../../FrameMaker/FMFrameMaker.m; sourceTree = "<group>"; };
-		A145F1EE1A5484DF00743292 /* UIView+FrameMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FrameMaker.h"; path = "../../FrameMaker/UIView+FrameMaker.h"; sourceTree = "<group>"; };
-		A145F1EF1A5484DF00743292 /* UIView+FrameMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FrameMaker.m"; path = "../../FrameMaker/UIView+FrameMaker.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +66,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A12C3EA81A6716300097A0EA /* FMFrameMaker */ = {
+			isa = PBXGroup;
+			children = (
+				A12C3EA91A6716300097A0EA /* FMFrameMaker.h */,
+				A12C3EAA1A6716300097A0EA /* FMFrameMaker.m */,
+				A12C3EAB1A6716300097A0EA /* UIView+FMFrameMaker.h */,
+				A12C3EAC1A6716300097A0EA /* UIView+FMFrameMaker.m */,
+			);
+			name = FMFrameMaker;
+			path = ../../FMFrameMaker;
+			sourceTree = "<group>";
+		};
 		A145F1B91A54841A00743292 = {
 			isa = PBXGroup;
 			children = (
@@ -91,10 +103,10 @@
 				A145F1CA1A54841A00743292 /* AppDelegate.m */,
 				A145F1CC1A54841A00743292 /* ViewController.h */,
 				A145F1CD1A54841A00743292 /* ViewController.m */,
+				A12C3EA81A6716300097A0EA /* FMFrameMaker */,
 				A145F1CF1A54841A00743292 /* Main.storyboard */,
 				A145F1D21A54841A00743292 /* Images.xcassets */,
 				A145F1D41A54841A00743292 /* LaunchScreen.xib */,
-				A145F1EB1A5484CC00743292 /* FrameMaker */,
 				A145F1C51A54841A00743292 /* Supporting Files */,
 			);
 			path = FrameMaker;
@@ -124,17 +136,6 @@
 				A145F1E01A54841A00743292 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A145F1EB1A5484CC00743292 /* FrameMaker */ = {
-			isa = PBXGroup;
-			children = (
-				A145F1EC1A5484DF00743292 /* FMFrameMaker.h */,
-				A145F1ED1A5484DF00743292 /* FMFrameMaker.m */,
-				A145F1EE1A5484DF00743292 /* UIView+FrameMaker.h */,
-				A145F1EF1A5484DF00743292 /* UIView+FrameMaker.m */,
-			);
-			name = FrameMaker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,9 +240,9 @@
 			files = (
 				A145F1CE1A54841A00743292 /* ViewController.m in Sources */,
 				A145F1CB1A54841A00743292 /* AppDelegate.m in Sources */,
-				A145F1F11A5484DF00743292 /* UIView+FrameMaker.m in Sources */,
+				A12C3EAE1A6716300097A0EA /* UIView+FMFrameMaker.m in Sources */,
 				A145F1C81A54841A00743292 /* main.m in Sources */,
-				A145F1F01A5484DF00743292 /* FMFrameMaker.m in Sources */,
+				A12C3EAD1A6716300097A0EA /* FMFrameMaker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
