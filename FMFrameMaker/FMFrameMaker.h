@@ -27,6 +27,9 @@
 @property (nonatomic, assign) CGFloat horizontalOffset;
 @property (nonatomic, assign) CGFloat verticalOffset;
 
+@property (nonatomic, assign) BOOL sizeToFit;
+@property (nonatomic, assign) CGSize sizeThatFitsSize;
+
 @property (nonatomic, assign) BOOL centeredVertically;
 @property (nonatomic, assign) BOOL centeredHorizontally;
 @property (nonatomic, assign) BOOL centered;

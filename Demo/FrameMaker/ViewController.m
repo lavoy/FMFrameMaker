@@ -11,7 +11,7 @@
 
 @interface ViewController ()
 
-@property (nonatomic, strong) UIView *subview;
+@property (nonatomic, strong) UILabel *subview;
 
 @end
 
@@ -21,7 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.subview = [[UIView alloc] init];
+    self.subview = [[UILabel alloc] init];
+    self.subview.text = @"This is a label.";
     self.subview.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:self.subview];
 }
@@ -58,7 +59,7 @@
     
     // set the frame using edge insets
     [self.subview fm_makeFrame:^(FMFrameMaker *frameMaker) {
-        frameMaker.size = CGSizeMake(100, 100);
+        frameMaker.sizeToFit = YES;
         frameMaker.horizontalOffset = 20;
         frameMaker.verticalOffset = 20;
     }];

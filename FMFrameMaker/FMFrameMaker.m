@@ -26,6 +26,9 @@
 @property (nonatomic, assign) BOOL hasHorizontalOffset;
 @property (nonatomic, assign) BOOL hasVerticalOffset;
 
+@property (nonatomic, assign) BOOL hasSizeToFit;
+@property (nonatomic, assign) BOOL hasSizeThatFitsSize;
+
 @property (nonatomic, assign) BOOL hasCenteredVertically;
 @property (nonatomic, assign) BOOL hasCenteredHorizontally;
 @property (nonatomic, assign) BOOL hasCentered;
@@ -49,6 +52,10 @@
     
     if (self.hasSize) { // set the size outright
         size = self.size;
+    } else if (self.hasSizeToFit) {
+        size = [self.view sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)];
+    } else if (self.hasSizeThatFitsSize) {
+        size = [self.view sizeThatFits:self.sizeThatFitsSize];
     } else {
         if (self.hasWidth) {    // set the width outright
             size.width = self.width;
@@ -157,6 +164,16 @@
 - (void)setVerticalOffset:(CGFloat)verticalOffset {
     _verticalOffset = verticalOffset;
     _hasVerticalOffset = YES;
+}
+
+- (void)setSizeToFit:(BOOL)sizeToFit {
+    _sizeToFit = sizeToFit;
+    _hasSizeToFit = sizeToFit;
+}
+
+- (void)setSizeThatFitsSize:(CGSize)sizeThatFitsSize {
+    _sizeThatFitsSize = sizeThatFitsSize;
+    _hasSizeThatFitsSize = YES;
 }
 
 - (void)setCenteredVertically:(BOOL)centeredVertically {
