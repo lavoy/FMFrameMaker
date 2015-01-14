@@ -45,7 +45,7 @@ Show a view sized inset 20 points vertically and horizontally
 
 #### Requirements
 
-FrameMaker uses simple APIs and is compatible all the way back to iOS 2.0.
+FrameMaker uses simple APIs and is compatible back to iOS 5.0.
 
 ### ARC
 
