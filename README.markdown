@@ -1,6 +1,6 @@
-# FrameMaker
+# FMFrameMaker
 
-FrameMaker is an Objective-C library for simplifying, encapsulating, and optimizing view layout logic into a single block for each view.
+FMFrameMaker is an Objective-C library for simplifying, encapsulating, and optimizing view layout logic into a single block for each view.
 
 `CGRect` frames are based upon the top left corner (`origin`) and the width and height (`size`). If you want to layout from the right, you have to do math. If you want to center, you have to do math. If you want to inset from the edges, you have to do math. With FrameMaker, you can forget about the math. You just specify the pieces you want to anchor, and FrameMaker figures out the rest.
 
@@ -45,7 +45,7 @@ Show a view sized inset 20 points vertically and horizontally
 
 #### Requirements
 
-FrameMaker uses simple APIs and is compatable all the way back to iOS 2.0.
+FrameMaker uses simple APIs and is compatible all the way back to iOS 2.0.
 
 ### ARC
 
