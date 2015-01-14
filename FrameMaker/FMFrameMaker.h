@@ -21,11 +21,11 @@
 @property (nonatomic, assign) CGFloat top;
 @property (nonatomic, assign) CGFloat bottom;
 
-@property (nonatomic, assign) UIEdgeInsets edgeInsets;
-@property (nonatomic, assign) UIOffset offset;
-
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
+
+@property (nonatomic, assign) CGFloat horizontalOffset;
+@property (nonatomic, assign) CGFloat verticalOffset;
 
 @property (nonatomic, assign) BOOL centeredVertically;
 @property (nonatomic, assign) BOOL centeredHorizontally;

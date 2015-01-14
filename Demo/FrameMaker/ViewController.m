@@ -34,11 +34,11 @@
 //    }];
     
     // set the frame using size and right/bottom
-    [self.subview fm_makeFrame:^(FMFrameMaker *frameMaker) {
-        frameMaker.size = CGSizeMake(100, 100);
-        frameMaker.bottom = 10;
-        frameMaker.right = 10;
-    }];
+//    [self.subview fm_makeFrame:^(FMFrameMaker *frameMaker) {
+//        frameMaker.size = CGSizeMake(100, 100);
+//        frameMaker.bottom = 10;
+//        frameMaker.right = 10;
+//    }];
     
     // set the frame using left/right
 //    [self.subview fm_makeFrame:^(FMFrameMaker *frameMaker) {
@@ -57,14 +57,11 @@
 //    }];
     
     // set the frame using edge insets
-//    [self.subview fm_makeFrame:^(FMFrameMaker *frameMaker) {
-//        frameMaker.edgeInsets = UIEdgeInsetsMake(40, 20, 20, 20);
-//    }];
-    
-    // set the frame using offset
-//    [self.subview fm_makeFrame:^(FMFrameMaker *frameMaker) {
-//        frameMaker.offset = UIOffsetMake(20, 20);
-//    }];
+    [self.subview fm_makeFrame:^(FMFrameMaker *frameMaker) {
+        frameMaker.size = CGSizeMake(100, 100);
+        frameMaker.horizontalOffset = 20;
+        frameMaker.verticalOffset = 20;
+    }];
     
     // set the frame using edges and height
 //    [self.subview fm_makeFrame:^(FMFrameMaker *frameMaker) {

@@ -20,11 +20,11 @@
 @property (nonatomic, assign) BOOL hasTop;
 @property (nonatomic, assign) BOOL hasBottom;
 
-@property (nonatomic, assign) BOOL hasEdgeInsets;
-@property (nonatomic, assign) BOOL hasOffset;
-
 @property (nonatomic, assign) BOOL hasWidth;
 @property (nonatomic, assign) BOOL hasHeight;
+
+@property (nonatomic, assign) BOOL hasHorizontalOffset;
+@property (nonatomic, assign) BOOL hasVerticalOffset;
 
 @property (nonatomic, assign) BOOL hasCenteredVertically;
 @property (nonatomic, assign) BOOL hasCenteredHorizontally;
@@ -52,17 +52,8 @@
     } else {
         if (self.hasWidth) {    // set the width outright
             size.width = self.width;
-        } else if ((self.hasLeft && self.hasRight) || self.hasEdgeInsets || self.hasOffset) { // set the left and right edges
-            CGFloat offsetWidth;
-            
-            if (self.hasEdgeInsets) {
-                offsetWidth = self.edgeInsets.left + self.edgeInsets.right;
-            } else if (self.hasOffset) {
-                offsetWidth = (2 * self.offset.horizontal);
-            } else {
-                offsetWidth = self.left + self.right;
-            }
-            
+        } else if (self.hasLeft && self.hasRight) { // set the left and right edges
+            CGFloat offsetWidth = self.left + self.right;
             size.width = self.view.superview.bounds.size.width - offsetWidth;
         } else {
             size.width = self.view.frame.size.width;
@@ -70,17 +61,8 @@
         
         if (self.hasHeight) {   // set the height outright
             size.height = self.height;
-        } else if ((self.hasTop && self.hasBottom) || self.hasEdgeInsets || self.hasOffset) { // set the top and bottom edges
-            CGFloat offsetHeight;
-            
-            if (self.hasEdgeInsets) {
-                offsetHeight = self.edgeInsets.top + self.edgeInsets.bottom;
-            } else if (self.hasOffset) {
-                offsetHeight = (2 * self.offset.vertical);
-            } else {
-                offsetHeight = self.top + self.bottom;
-            }
-            
+        } else if (self.hasTop && self.hasBottom) { // set the top and bottom edges
+            CGFloat offsetHeight = self.top + self.bottom;
             size.height = self.view.superview.bounds.size.height - offsetHeight;
         } else {
             size.height = self.view.frame.size.height;
@@ -90,10 +72,6 @@
     
     if (self.hasOrigin) {   // set the origin outright
         origin = self.origin;
-    } else if (self.hasEdgeInsets) {
-        origin = CGPointMake(self.edgeInsets.left, self.edgeInsets.top);
-    } else if (self.hasOffset) {
-        origin = CGPointMake(self.offset.horizontal, self.offset.vertical);
     } else {
         if (self.hasLeft) { // set the x outright
             origin.x = self.left;
@@ -114,6 +92,15 @@
         } else {
             origin.y = self.view.frame.origin.y;
         }
+    }
+    
+    
+    if (self.hasHorizontalOffset) {
+        origin.x += self.horizontalOffset;
+    }
+    
+    if (self.hasVerticalOffset) {
+        origin.y += self.verticalOffset;
     }
     
     
@@ -152,16 +139,6 @@
     _hasBottom = YES;
 }
 
-- (void)setEdgeInsets:(UIEdgeInsets)edgeInsets {
-    _edgeInsets = edgeInsets;
-    _hasEdgeInsets = YES;
-}
-
-- (void)setOffset:(UIOffset)offset {
-    _offset = offset;
-    _hasOffset = YES;
-}
-
 - (void)setWidth:(CGFloat)width {
     _width = width;
     _hasWidth = YES;
@@ -170,6 +147,16 @@
 - (void)setHeight:(CGFloat)height {
     _height = height;
     _hasHeight = YES;
+}
+
+- (void)setHorizontalOffset:(CGFloat)horizontalOffset {
+    _horizontalOffset = horizontalOffset;
+    _hasHorizontalOffset = YES;
+}
+
+- (void)setVerticalOffset:(CGFloat)verticalOffset {
+    _verticalOffset = verticalOffset;
+    _hasVerticalOffset = YES;
 }
 
 - (void)setCenteredVertically:(BOOL)centeredVertically {

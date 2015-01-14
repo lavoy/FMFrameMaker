@@ -31,16 +31,12 @@ Show a sized view 10 points from the bottom right corner
 	frameMaker.right = 10;
 }];
 ```
-Show a view sized correctly inside the edges of (40, 20, 20, 20)
+Show a view sized inset 20 points vertically and horizontally
 ```objc
 [view fm_makeFrame:^(FMFrameMaker *frameMaker) {
-	frameMaker.edgeInsets = UIEdgeInsetsMake(40, 20, 20, 20);
-}];
-```
-Show a view offset 40 vertically and 20 horizontally
-```objc
-[view fm_makeFrame:^(FMFrameMaker *frameMaker) {
-	frameMaker.offset = UIOffsetMake(40, 20);
+	frameMaker.size = CGSizeMake(100, 100);
+	frameMaker.horizontalOffset = 20;
+	frameMaker.verticalOffset = 20;
 }];
 ```
 
