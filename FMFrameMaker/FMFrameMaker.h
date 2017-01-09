@@ -11,6 +11,8 @@
 #import <UIKit/UIKit.h>
 #import "UIView+FMFrameMaker.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FMFrameMaker : NSObject
 
 @property (nonatomic, assign) CGPoint origin;
@@ -36,5 +38,7 @@
 
 - (instancetype)initWithView:(UIView *)view;
 - (void)install;
+
+NS_ASSUME_NONNULL_END
 
 @end

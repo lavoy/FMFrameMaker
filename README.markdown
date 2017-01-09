@@ -18,14 +18,14 @@ This library was inspired by [Masonry] (https://github.com/Masonry/Masonry), but
 ```
 Center a sized view
 ```objc
-[view fm_makeFrame:^(FMFrameMaker *frameMaker) {
+[view makeFrame:^(FMFrameMaker *frameMaker) {
 	frameMaker.size = CGSizeMake(100, 100);
 	frameMaker.centered = YES;
 }];
 ```
 Show a sized view 10 points from the bottom right corner
 ```objc
-[view fm_makeFrame:^(FMFrameMaker *frameMaker) {
+[view makeFrame:^(FMFrameMaker *frameMaker) {
 	frameMaker.size = CGSizeMake(100, 100);
 	frameMaker.bottom = 10;
 	frameMaker.right = 10;
@@ -33,7 +33,7 @@ Show a sized view 10 points from the bottom right corner
 ```
 Show a view sized inset 20 points vertically and horizontally
 ```objc
-[view fm_makeFrame:^(FMFrameMaker *frameMaker) {
+[view makeFrame:^(FMFrameMaker *frameMaker) {
 	frameMaker.size = CGSizeMake(100, 100);
 	frameMaker.horizontalOffset = 20;
 	frameMaker.verticalOffset = 20;
@@ -48,6 +48,10 @@ Show a view sized inset 20 points vertically and horizontally
 FrameMaker uses simple APIs and is compatible back to iOS 5.0.
 
 ### ARC
+
+Yuuuup!
+
+### Nullability for Swift
 
 Yuuuup!
 

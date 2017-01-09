@@ -58,7 +58,7 @@
 //    }];
     
     // set the frame using edge insets
-    [self.subview fm_makeFrame:^(FMFrameMaker *frameMaker) {
+    [self.subview makeFrame:^(FMFrameMaker *frameMaker) {
         frameMaker.sizeToFit = YES;
         frameMaker.horizontalOffset = 20;
         frameMaker.verticalOffset = 20;

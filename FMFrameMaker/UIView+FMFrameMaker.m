@@ -11,7 +11,7 @@
 
 @implementation UIView (FMFrameMaker)
 
-- (void)fm_makeFrame:(void(^)(FMFrameMaker *frameMaker))block {
+- (void)makeFrame:(void(^)(FMFrameMaker *frameMaker))block {
     FMFrameMaker *frameMaker = [[FMFrameMaker alloc] initWithView:self];
     block(frameMaker);
     [frameMaker install];
